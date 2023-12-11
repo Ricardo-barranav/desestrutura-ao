@@ -1,0 +1,40 @@
+class SpaceshipWeapon {
+    constructor(identifier) {
+    this.identifier = identifier
+    this.shotsLeft = 5
+    
+    }
+    
+    shoot () {
+    if(this. shotsLeft > 0) {
+    console. log("Bang!")
+    this. shotsLeft -= 1
+    } else {
+    throw new Error("Arma " + this. identifier + " sem munição")
+    }
+}
+}
+let fenixWeapon = new SpaceshipWeapon(10)
+fenixWeapon. shoot ()
+fenixWeapon. shoot ()
+fenixWeapon. shoot ()
+fenixWeapon. shoot ()
+fenixWeapon. shoot ()
+fenixWeapon. shoot ()
+console. log(fenixWeapon)
+
+
+
+PS C:\Users\Luizr\OneDrive\Área de Trabalho\onebit> node .\index.js
+Bang!
+Bang!
+Bang!
+Bang!
+Bang!
+C:\Users\Luizr\OneDrive\Área de Trabalho\onebit\index.js:13
+    throw new Error("Arma " + this. identifier + " sem munição")
+    ^
+
+Error: Arma 10 sem munição
+
+
